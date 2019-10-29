@@ -1,0 +1,7 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    clear: both; // Clear float right or left
+    display: table;
+  }
+}
