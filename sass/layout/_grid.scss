@@ -2,7 +2,7 @@
   max-width: $grid-width;
   margin: 0 auto;
 
-  // All children except the last one
+  // All rows, except the last one
   &:not(:last-child) {
     margin-bottom: $gap-vertical;
   }
