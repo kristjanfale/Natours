@@ -1,7 +1,14 @@
 @mixin clearfix {
   &::after {
-    content: '';
+    content: "";
     clear: both; // Clear float right or left
     display: table;
   }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
