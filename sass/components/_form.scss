@@ -18,6 +18,10 @@
     transition: all 400ms;
     border-bottom: 0.3rem solid transparent; // When we click(focus) on input the adjacent input moves a little bit, cus of the border. So we add a transparent border on input, before focusing it
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -56,6 +60,11 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input {
@@ -80,7 +89,7 @@
     top: -0.5rem;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       height: 1.3rem;
       width: 1.3rem;

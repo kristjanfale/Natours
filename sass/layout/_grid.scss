@@ -2,22 +2,39 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include clearfix;
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
   // All rows, except the last one
   &:not(:last-child) {
     margin-bottom: $gap-vertical;
-  }
 
-  @include clearfix;
+    @include respond(tab-port) {
+      margin-bottom: $gap-vertical-small;
+    }
+  }
 
   // All of the elements that have attribute class which starts with "col-"
   // * - contains
   // $ - ends with
   // ^ - starts with
-  [class^='col-'] {
+  [class^="col-"] {
     float: left;
 
     &:not(:last-child) {
       margin-right: $gap-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gap-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
 

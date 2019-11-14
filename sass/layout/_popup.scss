@@ -22,11 +22,21 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all 400ms 200ms;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
   }
 
   &__left {
     width: 33.33333%;
     display: table-cell;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
   }
 
   &__right {
@@ -34,11 +44,28 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(tab-port) {
+      display: inline;
+      width: 35%;
+      margin: 1.5rem;
+    }
+
+    @include respond(phone) {
+      display: inline;
+      width: 30%;
+      margin: 0.5rem;
+    }
   }
 
   &__text {
@@ -51,6 +78,11 @@
     column-count: 2;
     column-gap: 4rem; // default gap = 1em = 14px, 1rem = 16px;
     column-rule: 0.1rem solid $color-grey-light-2;
+
+    @include respond(phone) {
+      -moz-column-count: 1;
+      column-count: 1;
+    }
   }
 
   // OPEN STATES
