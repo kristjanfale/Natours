@@ -191,8 +191,8 @@ body {
       .footer__logo-box {
         margin-bottom: 4rem; } }
   .footer__logo {
-    width: 14rem;
-    height: 14rem; }
+    width: 15rem;
+    height: auto; }
   .footer__navigation {
     border-top: 0.1rem solid #777;
     padding-top: 2rem;
