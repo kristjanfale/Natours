@@ -15,7 +15,7 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/nat-4.jpg);
+    url(../img/nat-4-1200px.jpg);
   background-size: cover;
   margin-top: -14vh;
 
@@ -25,6 +25,16 @@
 
   & > * {
     transform: skewY(7deg);
+  }
+
+  // The larger image is shown when: the resolution is 2x and the width is larger than 600px OR the width is larger than 2000px (even with 1x screens)
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-4-2000px.jpg);
   }
 
   @include respond(tab-port) {
@@ -70,7 +80,7 @@
       rgba($color-white, 0.9) 0% 50%,
       transparent 50% 100%
     ),
-    url(../img/nat-10.jpg);
+    url(../img/nat-10-2000px.jpg);
   background-size: cover;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
@@ -81,12 +91,12 @@
         rgba($color-white, 0.9) 0% 65%,
         transparent 65% 100%
       ),
-      url(../img/nat-10.jpg);
+      url(../img/nat-10-2000px.jpg);
   }
 
   @include respond(tab-port) {
     background-image: linear-gradient(to right, rgba($color-white, 0.9) 0% 100%),
-      url(../img/nat-10.jpg);
+      url(../img/nat-10-600px.jpg);
   }
 
   &__form {

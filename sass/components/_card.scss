@@ -75,7 +75,17 @@
           $color-secondary-light,
           $color-secondary-dark
         ),
-        url(../img/nat-5.jpg);
+        url(../img/nat-5-2000px.jpg);
+
+      // The smaller image is shown when the width is smaller than 600px
+      @media (max-width: 37.5em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.8),
+            rgba($color-secondary-dark, 0.8)
+          ),
+          url(../img/nat-5-500px.jpg);
+      }
     }
 
     &--2 {
@@ -84,7 +94,17 @@
           $color-primary-light,
           $color-primary-dark
         ),
-        url(../img/nat-6.jpg);
+        url(../img/nat-6-2000px.jpg);
+
+      // The smaller image is shown when the width is smaller than 600px
+      @media (max-width: 37.5em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+          ),
+          url(../img/nat-6-500px.jpg);
+      }
     }
 
     &--3 {
@@ -93,7 +113,17 @@
           $color-tertiary-light,
           $color-tertiary-dark
         ),
-        url(../img/nat-7.jpg);
+        url(../img/nat-7-2000px.jpg);
+
+      // The smaller image is shown when the width is smaller than 600px
+      @media (max-width: 37.5em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-tertiary-light, 0.8),
+            rgba($color-tertiary-dark, 0.8)
+          ),
+          url(../img/nat-7-500px.jpg);
+      }
     }
   }
 
