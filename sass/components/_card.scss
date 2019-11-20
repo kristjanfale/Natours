@@ -78,7 +78,7 @@
         url(../img/nat-5-2000px.jpg);
 
       // The smaller image is shown when the width is smaller than 600px
-      @media (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em) {
         background-image: linear-gradient(
             to right bottom,
             rgba($color-secondary-light, 0.8),
@@ -97,7 +97,7 @@
         url(../img/nat-6-2000px.jpg);
 
       // The smaller image is shown when the width is smaller than 600px
-      @media (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em) {
         background-image: linear-gradient(
             to right bottom,
             rgba($color-primary-light, 0.8),
@@ -116,7 +116,7 @@
         url(../img/nat-7-2000px.jpg);
 
       // The smaller image is shown when the width is smaller than 600px
-      @media (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em) {
         background-image: linear-gradient(
             to right bottom,
             rgba($color-tertiary-light, 0.8),
@@ -219,7 +219,8 @@
   }
 
   // MEDIA QUERY
-  @include respond(tab-port) {
+  //@include respond(tab-port)
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 0.3rem;
     background-color: $color-white;
