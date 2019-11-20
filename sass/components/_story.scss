@@ -8,7 +8,6 @@
   padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
-  position: relative;
 
   @include respond(tab-port) {
     width: 100%;
@@ -24,12 +23,17 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    // For "shape-outside" to work, the element must be floated and has to have height and width. This defines how the content flows arount the element
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%); // circle(radius at position)
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      // For "shape-outside" to work, the element must be floated and has to have height and width. This defines how the content flows arount the element
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%); // circle(radius at position)
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
